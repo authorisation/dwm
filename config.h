@@ -29,6 +29,7 @@ static const char *colors[][3]      = {
 static const char *const autostart[] = {
 	"sh", "-c", "~/.config/dwm/pipewire.sh", NULL,
 	"sh", "-c", "~/.config/dwm/run.sh", NULL,
+	"sh", "-c", "~/.config/dwm/bar.sh", NULL,
 	NULL /* terminate */
 };
 
@@ -43,7 +44,6 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,      -1,-1,-1,-1,         -1 },
-    { "TelegramDesktop", NULL,    "Media viewer",  1 << 7,    1,     -1,      -1,-1,-1,-1,         -1 },
     { "Nemo",     NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Leafpad",  NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "gnome-calculator", NULL, NULL,     0,            1,           -1,      -1,-1,-1,-1,         -1 },
@@ -51,11 +51,10 @@ static const Rule rules[] = {
 	{ "Xarchiver", NULL,      NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "sxiv",     NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "kitty",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
-	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
+	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,850,-1,         -1 },
 	{ "Steam",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "pcmanfm-qt", NULL,     NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Feather",  NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
-	{ "fl64.exe", NULL,       "FL Studio 21", 0,        0,           -1,      -1,-1,-1,-1,         -1 },
 };
 
 /* layout(s) */
