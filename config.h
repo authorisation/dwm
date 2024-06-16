@@ -51,7 +51,7 @@ static const Rule rules[] = {
 	{ "Xarchiver", NULL,      NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "sxiv",     NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "kitty",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
-	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,850,-1,         -1 },
+	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,950,650,       -1 },
 	{ "Steam",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "pcmanfm-qt", NULL,     NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Feather",  NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
