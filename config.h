@@ -90,7 +90,6 @@ static const char *flameshotcmd[] = { "flameshot", "gui", "--clipboard", "--path
 
 static char dmenumon[2] = "0";
 
-#include "exitdwm.c"
 static const Key keys[] = {
     /* modifier                         key         function        argument */
     { MODKEY,                           XK_d,       spawn,	{.v = roficmd } },
@@ -131,7 +130,7 @@ static const Key keys[] = {
     // kill window
     { MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 
-	{ MODKEY|ShiftMask,             XK_e,      exitdwm,       {0} },
+	{ MODKEY|ShiftMask,             XK_e,      quit,       {0} },
 	{ MODKEY,                     XK_Tab,    alttab,         {0} },
 
     TAGKEYS(                            XK_1,                       0)
