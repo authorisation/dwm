@@ -63,6 +63,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "HHH",	  grid},	 /* grid layout */
 	{ "[M]",      monocle },
 };
 

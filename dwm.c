@@ -213,6 +213,7 @@ static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
 static void mappingnotify(XEvent *e);
 static void maprequest(XEvent *e);
+static void grid(Monitor *m);
 static void monocle(Monitor *m);
 static void motionnotify(XEvent *e);
 static void movemouse(const Arg *arg);
@@ -1402,6 +1403,34 @@ maprequest(XEvent *e)
 		return;
 	if (!wintoclient(ev->window))
 		manage(ev->window, &wa);
+}
+
+void
+grid(Monitor *m) {
+	unsigned int i, n, cx, cy, cw, ch, aw, ah, cols, rows;
+	Client *c;
+
+	for(n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next))
+		n++;
+
+	/* grid dimensions */
+	for(rows = 0; rows <= n/2; rows++)
+		if(rows*rows >= n)
+			break;
+	cols = (rows && (rows - 1) * rows >= n) ? rows - 1 : rows;
+
+	/* window geoms (cell height/width) */
+	ch = m->wh / (rows ? rows : 1);
+	cw = m->ww / (cols ? cols : 1);
+	for(i = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next)) {
+		cx = m->wx + (i / rows) * cw;
+		cy = m->wy + (i % rows) * ch;
+		/* adjust height/width of last row/column's windows */
+		ah = ((i + 1) % rows == 0) ? m->wh - ch * rows : 0;
+		aw = (i >= rows * (cols - 1)) ? m->ww - cw * cols : 0;
+		resize(c, cx, cy, cw - 2 * c->bw + aw, ch - 2 * c->bw + ah, False);
+		i++;
+	}
 }
 
 void
