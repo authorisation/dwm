@@ -16,9 +16,9 @@ static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#1D2330";
 static const char col_gray2[]       = "#4B5665";
-static const char col_gray3[]       = "#AD69AF";
-static const char col_gray4[]       = "#d1d7e1";
-static const char col_cyan[]        = "#84598D";
+static const char col_gray3[]       = "#5E34A1";
+static const char col_gray4[]       = "#D1D7E1";
+static const char col_cyan[]        = "#4B2981";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
