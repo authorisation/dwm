@@ -1044,6 +1044,8 @@ focus(Client *c)
 		attachstack(c);
 		grabbuttons(c, 1);
 		XSetWindowBorder(dpy, c->win, scheme[SchemeSel][ColBorder].pixel);
+		if (c->isfloating) 
+			XRaiseWindow(dpy, c->win);
 		setfocus(c);
 	} else {
 		XSetInputFocus(dpy, root, RevertToPointerRoot, CurrentTime);
@@ -1723,12 +1725,10 @@ restack(Monitor *m)
 	if (m->sel->isfloating || !m->lt[m->sellt]->arrange)
 		XRaiseWindow(dpy, m->sel->win);
 
-	/* raise the aot window */
-	for(Monitor *m_search = mons; m_search; m_search = m_search->next){
-		for(c = m_search->clients; c; c = c->next){
-//			if(c->isalwaysontop){
-				XRaiseWindow(dpy, c->win);
-//			}
+	/* raise floating windows */
+	for (c = m->stack; c; c = c->snext) {
+		if (c->isfloating) {
+			XRaiseWindow(dpy, c->win);
 		}
 	}
 

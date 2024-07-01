@@ -46,13 +46,11 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Xarchiver", NULL,      NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "sxiv",     NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
-	{ "kitty",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
-	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,950,600,       -1 },
+	{ "st",       NULL,       NULL,       0,            1,           -1,      -1,-1,950,580,       -1 },
 	{ "Steam",    NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "pcmanfm-qt", NULL,     NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Feather",  NULL,       NULL,       0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "lxqt-archiver",  NULL,       NULL,       0,            1,           -1,      -1,-1,950,600,         -1 },
-	{ "keepassxc",  NULL,       NULL,       0,            1,           -1,      -1,-1,950,600,         -1 },
 };
 
 /* layout(s) */
