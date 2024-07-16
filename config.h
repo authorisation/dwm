@@ -12,6 +12,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int focusonwheel       = 0;
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#1D2330";
@@ -52,7 +53,8 @@ static const Rule rules[] = {
 	{ "Feather",        NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "lxqt-archiver",  NULL,       NULL,           0,            1,           -1,      -1,-1,950,600,       -1 },
 	{ "fl64.exe",       NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1          -1 }, // All FL Studio windows floating by default
-    { "fl64.exe",       NULL,       "FL Studio 21", 0,            0,           -1,      -1,-1,-1,-1          -1 }, // Main FL Studio window not floating
+        { "fl64.exe",       NULL,       "FL Studio 21", 0,            0,           -1,      -1,-1,-1,-1          -1 }, // Main FL Studio window not floating
+	{ "arqiver",        NULL,       NULL,           0,            1 ,          -1,      -1,-1,950,600,       -1 } 
 };
 
 /* layout(s) */
