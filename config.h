@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
+	/* class            instance    title           tags mask     isfloating   	monitor  float x,y,w,h        floatborderpx*/
 	{ "Gimp",           NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Firefox",        NULL,       NULL,           1 << 8,       0,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Xarchiver",      NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1,         -1 },
@@ -52,9 +52,9 @@ static const Rule rules[] = {
 	{ "pcmanfm-qt",     NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "Feather",        NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1,         -1 },
 	{ "lxqt-archiver",  NULL,       NULL,           0,            1,           -1,      -1,-1,950,600,       -1 },
-	{ "fl64.exe",       NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1          -1 }, // All FL Studio windows floating by default
-        { "fl64.exe",       NULL,       "FL Studio 21", 0,            0,           -1,      -1,-1,-1,-1          -1 }, // Main FL Studio window not floating
-	{ "arqiver",        NULL,       NULL,           0,            1 ,          -1,      -1,-1,950,600,       -1 } 
+	{ "fl64.exe",       NULL,       NULL,           0,            1,           -1,      -1,-1,-1,-1          -1 },
+    { "fl64.exe",       NULL,       "FL Studio 21", 0,            0,           -1,      -1,-1,-1,-1          -1 },
+	{ "Arqiver",        NULL,       NULL,           0,            1 ,          -1,      -1,-1,950,600,       -1 } 
 };
 
 /* layout(s) */
